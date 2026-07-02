@@ -1,146 +1,37 @@
-# 🏠 Student Room Registration System
+# Dynamic Flask Allocation Engine & Inventory Routing System
 
-A simple web-based Student Room Registration System built using Flask. The application allows students to register for available rooms by entering their details and selecting a room from the list of available rooms.
+A lightweight, high-performance web routing application built using the Flask micro-framework. The system acts as a proof-of-concept for dynamic resource distribution, demonstrating secure HTTP `POST` form data ingestion, in-memory inventory mapping, and dynamic server-side template rendering using Jinja2.
 
-## 📌 Features
+## 🚀 Key Features
+* **Dynamic Content Routing:** Implements modular Flask endpoint routing to render UI states dynamically based on underlying array configurations.
+* **State-Driven Ingestion Pipeline:** Uses an HTTP `POST` method workflow to capture user parameters (`name`, `student_id`, `room`) directly from web inputs.
+* **Contextual Data Binding:** Utilizes server-side injection to pass live, in-memory lists to frontend selection structures seamlessly.
+* **Secure State Transition:** Maps transactional inputs immediately onto success status screens, isolating individual user contexts per session request.
 
-* Student registration form
-* Room selection from predefined available rooms
-* User-friendly interface
-* Registration confirmation page
-* Built with Python and Flask
+## 🛠️ Technical Stack & Architecture
+* **Language:** Python
+* **Backend Framework:** Flask
+* **Frontend Engine:** Jinja2 Template Engine, HTML5
+* **Architecture Pattern:** Model-View-Controller (MVC) architectural principles
 
----
+## 🏗️ Technical Highlights & Logic
+* **Dynamic Inventory Control:** Rooms are configured inside a global array matrix (`available_rooms`), allowing the backend routing logic to pass the target allocation structure into the view tier on load.
+* **HTTP Parameter Extraction:** Implements `request.form` validation blocks within the `/submit` routine to parse form data and route the mapped strings instantly to final receipt displays.
 
-## 🛠️ Technologies Used
+## 🔮 Future Roadmap & Expansion (Mini-Project Progression)
+* **Persistent Database Integration:** Swapping out the current in-memory array (`available_rooms`) for a relational SQLite or PostgreSQL database to handle permanent transaction logging.
+* **Dynamic Array Mutations:** Updating the `/submit` endpoint logic to pop or remove a selected item from the pool upon successful booking, preventing double-allocations.
 
-* Python 3
-* Flask
-* HTML5
-* CSS3
-* Jinja2 Templates
-
----
-
-## 📂 Project Structure
-
-```text
-student-room-registration/
-│
-├── app.py
-├── templates/
-│   ├── index.html
-│   └── success.html
-│
-├── requirements.txt
-└── README.md
-```
-
----
-
-## 🚀 Installation
-
-### 1. Clone the Repository
-
+## 💻 Installation & Setup
 ```bash
-git clone https://github.com/yourusername/student-room-registration.git
-cd student-room-registration
-```
+# Clone the repository
+git clone [https://github.com/ppoobesh/Room-slot-booking.git](https://github.com/ppoobesh/Room-slot-booking.git)
 
-### 2. Create a Virtual Environment
+# Navigate to the project directory
+cd Room-slot-booking
 
-```bash
-python -m venv .venv
-```
-
-### 3. Activate the Virtual Environment
-
-#### Windows
-
-```bash
-.venv\Scripts\activate
-```
-
-#### Linux/macOS
-
-```bash
-source .venv/bin/activate
-```
-
-### 4. Install Dependencies
-
-```bash
+# Install Flask dependency
 pip install flask
-```
 
-or
-
-```bash
-pip install -r requirements.txt
-```
-
-### 5. Run the Application
-
-```bash
+# Execute the application server
 python app.py
-```
-
-### 6. Open in Browser
-
-Visit:
-
-```text
-http://127.0.0.1:5000
-```
-
----
-
-## 🔄 Application Workflow
-
-1. User opens the registration page.
-2. User enters:
-
-   * Name
-   * Student ID
-   * Preferred Room
-3. User submits the form.
-4. The application processes the data.
-5. A success page displays the registration details.
-
----
-
-## 📋 Available Rooms
-
-The application currently provides the following rooms:
-
-* A101
-* A102
-* A103
-* B201
-* B202
-* B203
-
----
-
-## 🔮 Future Enhancements
-
-* Database integration (MySQL/SQLite)
-* Room availability tracking
-* Student login system
-* Admin dashboard
-* Email confirmation
-* Room capacity management
-
----
-
-## 👨‍💻 Author
-
-Poobesh Pradeepkumar
-
-GitHub: https://github.com/ppoobesh
-
----
-
-## 📄 License
-
-This project is developed for educational and learning purposes.
